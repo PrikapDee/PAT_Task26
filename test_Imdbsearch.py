@@ -50,7 +50,7 @@ class Test_Imdb:
             actor_name = self.driver.find_element(By.XPATH, value=Imdblocators().actor_locator).text
             # assert statement to verify expected result
             assert actor_name.replace("1. ", "") == Imdbdata().search_data
-            print("success: testcase pass")
+            print("success: search result of  {a} ".format(a=Imdbdata().search_data), " is coming")
 
         except NoSuchElementException as e:
             print(e)
